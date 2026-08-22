@@ -1,0 +1,70 @@
+# ===== Dependencies =====
+node_modules/
+front-end/node_modules/
+back-end/node_modules/
+.pnp
+.pnp.js
+jspm_packages/
+
+# ===== Environment variables =====
+.env
+.env.*
+!.env.example
+front-end/.env
+front-end/.env.*
+back-end/.env
+back-end/.env.*
+
+# ===== Build output =====
+dist/
+dist-ssr/
+build/
+out/
+front-end/dist/
+back-end/dist/
+back-end/build/
+
+# ===== Vite / frontend =====
+.vite/
+*.local
+
+# ===== TypeScript =====
+*.tsbuildinfo
+
+# ===== Logs =====
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ===== Testing / coverage =====
+coverage/
+.nyc_output/
+
+# ===== Caches =====
+.cache/
+.eslintcache
+.stylelintcache
+.turbo/
+.npm/
+
+# ===== MongoDB local data (if you ever run it locally next to the repo) =====
+data/db/
+*.mongodb
+
+# ===== Editors / OS =====
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+
+# ===== Misc =====
+*.pem
+*.tgz
+.vercel
+.netlify
