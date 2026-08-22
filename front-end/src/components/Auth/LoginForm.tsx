@@ -3,13 +3,11 @@ import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { ArrowRight, Eye, EyeOff, LockKeyhole, Mail } from "lucide-react";
-import { siGithub } from "simple-icons";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-import { BrandIcon } from "@/components/ui/BrandIcon";
 import { cn } from "@/lib/utils";
 
 const loginSchema = z.object({
@@ -37,12 +35,6 @@ export function LoginForm() {
     // TODO: replace with your authentication request.
     await new Promise((resolve) => setTimeout(resolve, 1000));
     console.log(values);
-  }
-
-  function handleGithubAuth() {
-    // TODO: kick off the real GitHub OAuth flow (redirect to your backend's
-    // /auth/github endpoint). The previous version linked straight to a
-    // personal GitHub profile, which isn't an auth flow at all.
   }
 
   return (
@@ -169,29 +161,6 @@ export function LoginForm() {
             )}
           </Button>
         </form>
-
-        {/* Divider */}
-        <div className="my-7 flex items-center gap-3">
-          <div className="h-px flex-1 bg-border" />
-
-          <span className="text-[10px] uppercase tracking-widest text-muted-foreground">
-            or continue with
-          </span>
-
-          <div className="h-px flex-1 bg-border" />
-        </div>
-
-        {/* Github — a real auth trigger now, not a link to a personal profile
-            nested (invalidly) inside another button */}
-        <Button
-          type="button"
-          variant="outline"
-          className="h-11 w-full gap-2"
-          onClick={handleGithubAuth}
-        >
-          <BrandIcon icon={siGithub} className="size-4" />
-          Continue with GitHub
-        </Button>
 
         {/* Security note */}
         <div className="mt-8 flex items-center justify-center gap-2 text-[10px] text-muted-foreground">
