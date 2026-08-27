@@ -7,7 +7,6 @@ export default function Loading() {
 
           <span className="relative inline-flex size-4 rounded-full bg-foreground/60" />
         </span>
-
         Loading content...
       </div>
     </section>

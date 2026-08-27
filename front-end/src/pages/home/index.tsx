@@ -74,10 +74,7 @@ export default function Home() {
           </Button>
 
           <Button size="lg" variant="ghost">
-            <a
-              href="mailto:sinaghafari.dev@gmail.com"
-              className="flex items-center justify-center"
-            >
+            <a href="mailto:sinaghafari.dev@gmail.com" className="flex items-center justify-center">
               <Mail className="mr-2 size-4" /> Contact
             </a>
           </Button>

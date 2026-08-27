@@ -58,6 +58,8 @@ export const experience: ExperienceItem[] = [
     location: "Tehran, Iran",
     start: "2017",
     end: "2021",
-    highlights: ["Transitioned into front-end engineering after graduating, self-taught alongside the degree."],
+    highlights: [
+      "Transitioned into front-end engineering after graduating, self-taught alongside the degree.",
+    ],
   },
 ];
