@@ -7,6 +7,7 @@ import Blog from "../pages/blog";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 import Login from "@/pages/login";
+import DashboardLayout from "@/components/Dashboard/dashboard-layout";
 
 export const router = createBrowserRouter([
   {
@@ -26,14 +27,21 @@ export const router = createBrowserRouter([
         path: RouteObject.LOGIN,
         Component: Login,
       },
+    ],
+  },
+  {
+    path: RouteObject.DASHBOARD,
+    Component: DashboardLayout,
+    errorElement: <RouterError />,
+    children: [
       {
-        path: RouteObject.DASHBOARD,
+        index: true,
         Component: Dashboard,
       },
-      {
-        path: RouteObject.NOT_FOUND,
-        Component: NotFound,
-      },
     ],
+  },
+  {
+    path: RouteObject.NOT_FOUND,
+    Component: NotFound,
   },
 ]);
